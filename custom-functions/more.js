@@ -58,7 +58,7 @@ const inchToCM =(inches)=> inches * 2.54;
 const addNumbers=(a, b=3) => a + b;
 
 
-//returning object//
+//returning object// //objects aee a collection of related properties and/or methods
 // function makeBaby(first, last){
 //  let baby ={
 //     name: `${first} ${last}`,
@@ -101,3 +101,104 @@ const addNumbers=(a, b=3) => a + b;
     }
    }
 
+   const jiggy ={
+    height: 32,
+    age: 27,
+    youAre: function(){
+        return`you are so tall`;
+    }
+   }
+
+
+   //shorthand method
+const dev = {
+
+    name: `micky`,
+    age: 32,
+    nationality: `china`,
+    yellHi(){
+        console.log(`hey wessssss`);
+       }  
+}
+
+
+const person ={
+    firstName: `spongebob`,
+    lastname: `squarepants`,
+    age: 30,
+    sayHello: function(){
+        return `hellooooooo spongy`
+    }
+};
+
+
+const person1 ={
+    firstName: `patrick`,
+    lastname: `mcguire`,
+    age: 10,
+    sayHello: () =>  `hellooooooo mcguire`,
+    
+};
+
+
+
+const person3 ={
+    name: `mark`,
+    age: 23,
+    isEmployed: false,
+    yellYo (){
+        console.log(`yooooooo mark`);
+    }
+}
+
+//callback functions//
+
+
+const button = document.querySelector(`.clickMe`);
+
+
+button.addEventListener(`click`, person3.yellYo);
+   
+
+
+setTimeout(person3.yellYo, 1000);
+
+
+
+
+//variable scope//
+
+
+//LOCAL SCOPE//
+
+function2();
+
+function function1(){
+    let x = 1;
+    console.log(x);
+}
+
+
+function function2(){
+    let x = 2;
+    console.log(x);
+}
+
+
+
+
+//GLOBAL SCOPE//
+
+
+let a=75; //variable declared outside of function makes it a global scope//
+
+unction2();
+
+function unction(){
+   console.log(a);
+}
+
+
+function unction2(){
+    console.log(a);
+ }
