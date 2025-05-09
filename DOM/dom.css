@@ -1,0 +1,31 @@
+#myButton{
+    font-size: 4rem;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+#yourButton{
+    font-size: 4rem;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+
+.enabled{
+    background-color: rgb(79, 79, 198);
+    color: white;
+}
+
+
+
+.hover{
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.2);
+    font-weight: 800;
+}
+
+

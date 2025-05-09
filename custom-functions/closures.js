@@ -244,18 +244,217 @@ console.log (result1);
 
 
 
-function outer(){
-    const message = `hello`;
+// function outer(){
+//     const message = `hello`;
  
  
-    function inner(){
-     console.log(message);
+//     function inner(){
+//      console.log(message);
+//     }
+ 
+//     inner();
+//  }
+ 
+//  outer();
+
+
+
+function greetMe(){
+    const greeting = `hello jerady`
+
+    function sayHello(){
+        console.log(greeting);
     }
+
+    sayHello();
+}
+
+greetMe();
+
+
+//*alternative method of accessing the outer variable is using the object method//
+
+// function keepScore(){
+//     let score = 0;
+   
+//     function newScore(){
+//         score ++;
+//         console.log(`your score is ${score}`)
+//     }
+
+
+//     return{newScore};
+// }
+
+// const yourScore = keepScore();
+
+// yourScore.newScore();
+// yourScore.newScore();
+// yourScore.newScore();
+
+
+
+
+// function keepScore(){
+//     let score = 0;
+   
+//     function newScore(){
+//         score ++;
+//         console.log(`your score is ${score}`)
+        
+//     }
+
+//     function getScore(){
+//         return score;
+//     }
+
+//     return{newScore, getScore};
+// }
+
+// const yourScore = keepScore();
+
+// yourScore.newScore();
+// yourScore.newScore();
+// yourScore.newScore();
+// yourScore.newScore();
+
+// console.log(`the current count is ${yourScore.getScore()}`);
+
+
+
+
+// function gameScore(){
+//     let score = 0;
+
+
+
+//     function increaseScore(points){
+//        score += points;
+//        console.log(`+ ${points}pts`);
+//     }
+
+
+
+//     function decreaseScore(points){
+//         score -= points;
+//         console.log(`- ${points}pts`);
+//      }
+
+
+
+//      function getScore(){
+//         return score;
+//      }
+
+
+//      return{increaseScore, decreaseScore, getScore};
+// }
+
+
+// const game = gameScore();
+
+// game.increaseScore(5);
+
+// game.increaseScore(29);
+
+// game.decreaseScore(15);
+
+// console.log(`your final score is ${game.getScore()} points`);
+
+
+
+// function gameScore(){
+//     let score = 0;
+
+
+
+//     function increaseScore(points){
+//       score += points;
+//       console.log(points);
+//     }
+
+
+
+//     function decreaseScore(points){
+//         score -= points;
+//         console.log(points);
+//       }
+
+
+
+//       function yourScore(){
+//         return score;
+//       }
+
+
+
+//       return{increaseScore, decreaseScore, yourScore};
+// }
  
-    return {inner};
- }
- 
- outer();
+
+
+// const final = gameScore();
+
+// final.increaseScore(500);
+// final.increaseScore(500);
+// final.increaseScore(200);
+// final.decreaseScore(434);
+
+
+// console.log(`your final score is ${final.yourScore()}`);
+
+
+
+
+function trueScore(){
+    let score = 0;
+
+
+    function increaseScore(points){
+        score += points;
+        console.log(points);
+    }
+    
+
+
+
+    function decreaseScore(points){
+        score -= points;
+        console.log(points);
+    }
+
+
+    function getScore(){
+        return score;
+    }
+
+
+
+    return{increaseScore, decreaseScore, getScore};
+}
+
+const real = trueScore();
+
+real.increaseScore(25);
+real.increaseScore(43);
+real.decreaseScore(30);
+real.increaseScore(99);
+real.decreaseScore(100);
+real.decreaseScore(45);
+real.decreaseScore(2);
+real.increaseScore(190);
+real.increaseScore(20);
+
+
+console.log(`your final score is ${real.getScore()}`);
+
+
+
+
+
+
+
+
 
 
 
