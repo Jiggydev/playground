@@ -104,7 +104,8 @@ newButton.classList.add(`enabled`);
 
 const button = document.getElementById(`yourButton`);
 
-button.classList.add(`enabled`);
+newButton.classList.add(`enabled`);
+
 
 //**classlist-remove method */
 button.classList.remove(`enabled`);
@@ -121,14 +122,124 @@ button.classList.remove(`enabled`);
 
 //**alternatively use the toggle method on the classlist property */
 
-button.addEventListener('mouseover', event =>{
-    event.target.classList.toggle(`hover`);
-    });
+// button.addEventListener('mouseover', event =>{
+//     event.target.classList.toggle(`hover`);
+//     });
 
-    button.addEventListener('mouseout', event =>{
+//     button.addEventListener('mouseout', event =>{
+//         event.target.classList.toggle(`hover`);
+//         });
+
+
+
+//         //**classlist-replace method */
+
+// newButton.classList.add(`enabled`);
+// newButton.addEventListener('click', event =>{
+//     event.target.classList.replace(`enabled`,`disabled`);
+// });
+
+
+
+
+//         //**classlist-contains method */
+
+// newButton.classList.add(`enabled`);
+// newButton.addEventListener('click', event =>{
+
+
+// if(event.target.classList.contains(`disabled`)){
+//  event.target.textContent += '😂';
+// }
+
+// else{
+//     event.target.classList.replace(`enabled`,`disabled`);
+// }
+
+// });
+
+
+
+const save = document.getElementById(`saveButton`);
+
+save.addEventListener(`mouseover`, event =>{
+    event.target.classList.add(`hover`);
+});
+
+
+save.addEventListener(`mouseout`, event =>{
+    event.target.classList.remove(`hover`);
+});
+
+
+
+
+const active = document.getElementById(`activeButton`);
+
+
+active.classList.add(`enabled`);
+
+// active.addEventListener(`click`, event =>{
+//     event.target.classList.replace(`enabled`, `disabled`);
+// })
+
+
+
+
+active.addEventListener(`click`, event =>{
+
+
+if(event.target.classList.contains(`disabled`)){
+ event.target.textContent = "saved";
+}
+
+else{
+    event.target.classList.replace(`enabled`, `disabled`);
+    event.target.textContent = `saved`;
+}
+});
+
+
+
+//**nodelists */
+
+
+let buttonGroup = document.querySelectorAll(`.yourButton`);
+
+buttonGroup.forEach(button =>{
+    button.classList.add(`enabled`);
+})
+
+
+
+buttonGroup.forEach(button =>{
+    button.addEventListener(`mouseover`, event =>{
         event.target.classList.toggle(`hover`);
-        });
+    })
+});
+
+
+buttonGroup.forEach(button =>{
+    button.addEventListener(`mouseout`, event =>{
+        event.target.classList.toggle(`hover`);
+    })
+});
+
+
+buttonGroup.forEach(button => {
+    button.addEventListener(`click`, event =>{
+
+if(event.target.classList.contains(`disabled`)){
+ event.target.textContent += "😂";
+}
+
+else{
+    event.target.classList.replace(`enabled`, `disabled`);
+    event.target.textContent += "😂";
+}
+
+    })
+})
 
 
 
-        //**classlist-replace method */
